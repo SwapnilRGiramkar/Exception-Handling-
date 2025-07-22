@@ -1,0 +1,65 @@
+***Note-->
+-The toString() method of object class is overrided in throwable class and all its subclass in such a way that they print the 
+ name of Exception alongwith the message.
+
+**Exception Handling---->
+-Exception Handling is the mechanism of bringing an application to its Normal Execution when an exception is an occured is known as 
+Exception Handling.
+-In java we can handle Exception with the help of try catch() block.
+--Syntax-->
+try
+{
+	Statement which might caused a perticular Exception;
+}
+catch(Throwable type reference variable)
+{
+	*Debugging Mechanism ;
+	*Message to the User;
+	*Reason for the Exception;
+	*Steps to be Solved ;
+}
+
+***try block-->
+-In the try block we declare the statement which are responsible for perticular Exception.
+-When an exception is occured throwable type object is created .
+-the reference of object created is thrown to the catch() block.
+
+***catch() block-->
+-The catch block has to catch() the reference thrown by the try block,only then we says the exception is handled Successfully.
+-In the catch() block does not catch the exception reference thrown by try then we say the exception is not handled.
+
+***Note-->
+-The catch() block gets executed only when the exception is handled.
+-The catch() block can catch Exception throen by try only if -->
+1)The Variable declare in catch block should be of the same type of exception created.
+2)The variable declare in catch block can be of its parent type  (Generalization) when the exception is thrown.
+
+***try with multiple catch() block-->
+-we used try eith multiple catch() block when there are multiple exception occuring from the same program.
+
+**Syntax-->
+try
+{
+	Statements;
+}
+catch(ArithmeticException e)
+{
+	
+}
+catch(NullPointerException e)
+{
+
+}
+catch(ClassCastException e)
+{
+
+}
+.
+.
+.
+.
+.
+
+-The reference of throwable type object is always throw first catch block,if its not cought it is passed to the second catch block
+ similarity references keeps on passing one catch block to another until anyone catch block will catch it.
+-If none of the catch blocks can catch the references we say the exception is not handled, and program goes to an unplanned stop.
